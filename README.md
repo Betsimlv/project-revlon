@@ -40,3 +40,5 @@ Los datos categorizados permiten generar reportes y dashboards para el monitoreo
 - **Apache Airflow** – Orquestación de flujos de trabajo
 - **DeepSeek API** – Modelo de IA para categorización de texto (sentimientos y tópicos)
 
+## Base de Datos
+![ER](./png/db.png)
