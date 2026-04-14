@@ -13,7 +13,7 @@
 
 /* full-bleed bg */
 body{
-  background:url("/static/assets/branding/login-bg.jpg") center/cover no-repeat fixed;
+  background:url("/static/assets/images/branding/login-bg.jpg") center/cover no-repeat fixed;
   min-height:100vh;
   font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
   color:var(--brand-text);
@@ -44,7 +44,7 @@ body::after{
 .login-brand__logo{
   width:min(680px, 92vw);     /* bigger */
   height:220px;               /* bigger */
-  background:url("/static/assets/branding/logo-white.png") center/contain no-repeat;
+  background:url("/static/assets/images/branding/logo-white.png") center/contain no-repeat;
   margin-bottom:12px;
 }
 
@@ -86,11 +86,10 @@ a{color:var(--brand-primary);font-weight:600} a:hover{color:var(--brand-primary-
     <!-- Brand header (big logo + welcome text) -->
     <div class="login-brand">
       <div class="login-brand__logo"></div>
-      <div class="login-brand__subtitle">Análisis de Productos Revlon</div>
     </div>
 
     <!-- original Bootstrap login card -->
-    <div class="container" style="max-width:560px; margin:0 auto;">
+    <div class="container" style="max-width:560px; margin:0 auto; margin-top: -400px;">
       <div id="loginbox" class="mainbox col-md-12">
         <div class="panel panel-primary">
           <div class="panel-heading">

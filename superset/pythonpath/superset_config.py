@@ -1,20 +1,21 @@
 import os
 
+# --- CRÍTICO PARA RENDER: Configuración del puerto ---
+PORT = int(os.environ.get("PORT", 8080))
+SUPERSET_WEBSERVER_ADDRESS = '0.0.0.0'
+SUPERSET_WEBSERVER_PORT = PORT
+
 # --- Use Postgres metadata DB (honor env) ---
 SQLALCHEMY_DATABASE_URI = os.environ.get("SUPERSET_DATABASE_URI")
 
-# --- Security headers / embedding ---
-# Disable Talisman so we can set our own headers (e.g., allow iframe embedding)
+
 TALISMAN_ENABLED = False
 
-# Allow iframe embedding (you’re reverse-proxying at /dash)
+# Allow iframe embedding (you're reverse-proxying at /dash)
 HTTP_HEADERS = {
     "X-Frame-Options": "ALLOWALL",
 }
 
-# Do NOT enable ENABLE_CORS here unless you install flask_cors in the image.
-# If you truly need API CORS, we can add it later the right way.
-# ENABLE_CORS = True  # <-- leave this OFF to avoid flask_cors import errors
 
 # --- Feature flags ---
 FEATURE_FLAGS = {
@@ -69,3 +70,18 @@ EXTRA_CATEGORICAL_COLOR_SCHEMES = [
         ],
     },
 ]
+
+
+ENABLE_PROXY_FIX = True
+
+# Deshabilitar rate limiting si causa problemas
+RATELIMIT_ENABLED = False
+
+# pythonpath/superset_config.py
+
+# Configuración para archivos estáticos
+STATIC_FOLDER = '/app/superset/static'
+STATIC_URL_PATH = '/static/'
+
+SERVE_STATIC_ASSETS = True
+ENABLE_PROXY_FIX = True
