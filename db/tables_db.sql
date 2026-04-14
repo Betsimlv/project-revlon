@@ -9,7 +9,7 @@ CREATE TABLE products_new (
     product_name VARCHAR(255) NOT NULL,
     product_link TEXT NOT NULL UNIQUE,
     product_link_img TEXT,
-    price TEXT,
+    price NUMERIC(10,2),
     description TEXT,
     counts_reviews INTEGER DEFAULT 0,
     star_1 INTEGER DEFAULT 0,
@@ -31,7 +31,7 @@ CREATE TABLE product_store_prices_new (
     id SERIAL PRIMARY KEY,
     product_id INT NOT NULL REFERENCES products_new(id) ON DELETE CASCADE,
     store_name VARCHAR(255) NOT NULL,
-    store_price TEXT NOT NULL,  
+    store_price NUMERIC(10,2),  
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- Un producto no puede tener dos precios en la misma tienda
