@@ -1,0 +1,40 @@
+{
+  "popup_window": "[data-testid='klaviyo-form-XHqH97']",
+  "popup_window_close": "button[aria-label='Close dialog']",
+  "info_products": {
+    "href": "grid-product__link",
+    "title": "grid-product__title",
+    "image": "img.grid-product__image",
+    "price": "js-product-price"
+  },
+  "details_products": {
+    "product-section": "product-section",
+    "price" : "span[class='product__price']",
+    "id": "data-product-id",
+    "description": [
+      "additional-product-info__content",
+      "div[class='additional-product-info__block additional-product-info__description-content']"
+    ],
+    "iframe": "iframe[role='document']",
+    "stores_section": "online-stores",
+    "items_stores": "div[role='listitem']",
+    "shadow_host": "div[data-bv-show='reviews']",
+    "rating_counts": "ul[class='yotpo-star-distribution']"
+  },
+
+  "comments": {
+    "button_next": "button[class='next']",
+    "next_page":"a[aria-label='Navigate to next page']",
+    "message":  "div.yotpo-review-content div.yotpo-text-container p.yotpo-read-more-text" ,
+    "headers": [
+      "p[class='yotpo-review-title']",
+      "h3[itemprop='name']",
+      "div[class='yotpo-star-rating yotpo-review-star-rating']",
+      "div[class='yotpo-date-format']"
+    ],
+    "author": "div[class='yotpo-reviewer-details']",
+    "incentivized": "span[class='yotpo-incentivized-text']",
+    "page": "a[class='selected yotpo-reviews-pagination-item yotpo-pagination-number']",
+    "id_comments": "div[class='yotpo-review']"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "tables": {
+    "collections": "INSERT INTO collections_new (collections_name) VALUES (%s)",
+    "products_new": "INSERT INTO products_new (   product_name, product_link, product_link_img, price, description,   counts_reviews, star_1, star_2, star_3, star_4, star_5, collection_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s , %s)",
+    "product_store_prices_new": "INSERT INTO product_store_prices_new (product_id, store_name, store_price) VALUES (%s, %s, %s)",
+    "product_comments_new": "INSERT INTO product_comments_new (product_id, title_comments, author_comments, rating_comments, message_comments, comment_date, page) VALUES  (%s, %s, %s, %s, %s, %s, %s )",
+    "categorys": "INSERT INTO comment_categories_new (comment_id, buena_difuminacion, aplicacion, textura, aroma, comparacion, buena_cobertura, tipo_piel, tono_piel, pigmentacion_conforme, efecto_estetico, precio_conforme, recomendacion, caracteristica_favorable, envase) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+    "sentiments": "INSERT INTO sentiments (comment_id, sentiments) VALUES (%s, %s)",
+    "traslate": "INSERT INTO traslate (comment_id, message_traslate) VALUES (%s,  %s)"
+  }
+}
